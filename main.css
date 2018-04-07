@@ -1,3 +1,35 @@
 body {
-    background-color: blue;
+    background-color: coral;
 }
+
+h1 {
+    text-align: center;
+}
+
+
+
+.col-md-5 {
+    text-align: center;
+}
+
+.col-md-2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.row {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.col-md-4{
+    text-align: center;
+}
+
+.btn {
+    background-color: slategrey;
+    color: white;
+}
+
+
+
