@@ -32,4 +32,47 @@ h1 {
 }
 
 
+.panel {
+    background-color:  slategrey;
+}
 
+.player-image {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+
+.panel-title {
+    font-size: 38px;
+}
+
+.points {
+    font-size: 36px;
+}
+
+.badge-image {
+    width: 100px;
+    height: 100px;
+}
+
+.badges-holder {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.winner-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner {
+    font-size: 50px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

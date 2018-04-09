@@ -60,15 +60,29 @@ startApplication();
  const fighterString = (fighterArray) => {
      let fighterString = "";
      for (let i=0; i<fighterArray.length; i++) {
-     fighterString += `<div class="fighter">`;
-     fighterString += `<h2>${fighterArray[i].name}</h2>`;
-     fighterString += `<img src="${fighterArray[i].gravatar_url}">`;
-     fighterString += `<p>${fighterArray[i].points.total}</p>`;
+     fighterString += `<div class="col-md-6">`;
+     fighterString +=     `<div class="panel">`;
+     fighterString +=         `<div class="panel-heading">`;
+     fighterString +=             `<div class="center">`
+     fighterString +=                  `<h2 class="panel-title">${fighterArray[i].name}</h2>`;
+     fighterString +=             `</div>`;
+     fighterString +=         `</div>`;
+     fighterString +=         `<div class="panel-body">`
+     fighterString +=             `<div class="center">`
+     fighterString +=                  `<img class="player-image"src="${fighterArray[i].gravatar_url}">`;
+     fighterString +=            `</div>`;
+     fighterString +=            `<div class="center">`
+     fighterString +=                  `<p class="points">${fighterArray[i].points.total}</p>`;
+     fighterString +=            `</div>`;
+     fighterString +=        `</div>`;
+     fighterString +=    `</div>`;
      fighterString += `</div>`;
      }
      writeToDom(fighterString, "player-holder");
      winnerNow(fighterArray); 
  }
+
+
  
  const winnerNow = (fighterArray) => {
      let fighter1 = fighterArray[0].points.total;
@@ -82,11 +96,20 @@ startApplication();
 
  const badgesCard = (fighter) => {
      let winnerString = "";
-     winnerString += `<div class="winner">${fighter.name}</div>`;
+     winnerString += `<div class="row">`
+     winnerString +=     `<div class="col-md-12">`;  
+     winnerString +=     `<div class="winner-name">`
+     winnerString +=          `<div class="panel-title winner">${fighter.name} WINS!!!!</div>`;
+     winnerString +=     `</div>`;
+     winnerString +=     `</div>`;
+     winnerString += `</div>`;
      for (let j=0; j<fighter.badges.length; j++) {
-     winnerString += `<div class="badges-holder">`;
-     winnerString += `<div>${fighter.badges[j].name}</div>`;
-     winnerString += `<img src="${fighter.badges[j].icon_url}">`;
+     winnerString += `<div class="col-md-1">`;
+     winnerString +=     `<div class="panel">`;
+     winnerString +=         `<div class="panel-body badges-holder img-circle">`
+     winnerString +=              `<img class="badge-image" src="${fighter.badges[j].icon_url}">`;
+     winnerString +=         `</div>`;
+     winnerString +=     `</div>`;
      winnerString += `</div>`;
      }
      writeToDom(winnerString, "winner-holder")
