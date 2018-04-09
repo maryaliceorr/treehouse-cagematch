@@ -16,14 +16,14 @@
         <div class="col-md-5">
             <div class="input-group" id="player-1">
                 <span class="input-group-addon" id="basic-addon1">Player 1:</span>
-                <input type="text" class="form-control" placeholder="Treehouse Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="fighter1-input" value="maryorr2" placeholder="Treehouse Username" aria-describedby="basic-addon1">
             </div>
         </diV>
         <div class="col-md-2">vs.</div>
         <div class="col-md-5">
             <div class="input-group" id="player-2">
                 <span class="input-group-addon" id="basic-addon1">Player 2:</span>
-                <input type="text" class="form-control" placeholder="Treehouse Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="fighter2-input" value="aprilnichols" placeholder="Treehouse Username" aria-describedby="basic-addon1">
             </div>
         </div>
     </div>
@@ -33,14 +33,15 @@
     <div class="row">
         <div class="col-md-4"></div>
         <p class="col-md-4">
-            <button type="button" class="btn btn-default btn-lg">FIGHT!!!</button>
+            <button type="button" class="btn btn-default btn-lg" id="fight-button">FIGHT!!!</button>
         </p>
         <div class="col-md-4"></div>
     </div>
+    <div id="player-holder"></div>
+    <div id="winner-holder"></div>
 
 
 
-</body>
       
     <script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
